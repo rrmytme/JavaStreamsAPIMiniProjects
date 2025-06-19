@@ -32,7 +32,7 @@ public class Main {
         );
 
         double totalDeposits = transactions.stream()
-                .map(BankTransactions::getAmount)
+                .map(BankTransactions::getAmount) // :: used to refer: a static method, an instance method, or. a constructor
                 .filter(amount -> amount > 0)
                 .reduce(0.0, Double::sum);
 
